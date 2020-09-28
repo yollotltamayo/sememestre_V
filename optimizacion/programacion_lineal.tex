@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+\usepackage{unicode-math}
+\usepackage{hyperref}
+\usepackage[
+top  = 3.15cm,
+bottom = 3.15cm,
+left   = 3.15cm,
+right  = 3.15cm]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{35pt}
+
+\begin{document}
+\rhead{Tamayo Hernandez Fernando Yollotl }
+    \section*{Modelo general de Programacion Lineal (notacion matricial)}
+    \begin{itemize}
+        \item Maximizar : \( z = cx \)
+        \item Sujeto a : \( Ax \le b \) y \( x \ge 0 \)
+            \begin{align*}
+                x &= \left( x_1, x_2,\ldots,x_n \right)^T \\
+                c &= \left( c_1 , c_2, \ldots , c_n \right) \\
+                A &= (a_{ij})_{m\cdot n} \\
+                b &= \left( b_1, b_2 , \ldots , b_m \right)^T
+            .\end{align*}
+    \item Donde \( c \) es aquello que representa el objetivo de la empresa.
+    \item Maximizar :
+        \[
+        z = \sum_{j = 1}^{n} c_j x_j
+    \] 
+\item Sujeto a :
+    \[
+        \sum_{i = 1}^{m} \sum_{j = 1}^{n}    a_{ij} x_{j} \le  b_i \implies x_j \ge 0
+    \] 
+    \end{itemize}
+    \section*{Problema de la WYNDOR GLASS } 
+    El obejtivo de la WYNDOR GLASS es no importa lo que se fabrique , 
+siempre se debe tener el maximo con lo minimo .\\
+Siempre debemos ser muy especicficos con el nombre de nuestras variables.\\
+
+\begin{align*}
+    x &= \begin{pmatrix}
+        x_1\\
+        x_2
+    \end{pmatrix}\\
+        c &= \left( 3000 \ 5000 \right) \\
+        b &= \begin{pmatrix} 
+            4 \\
+            12 \\
+            8
+        \end{pmatrix}\\
+        A &=  
+        \begin{pmatrix}
+            1 & 0 \\
+            0 & 2 \\
+            3 & 2 
+        \end{pmatrix}\\
+        \text{Maximizar} &:z = ( 3000 \ 5000) \begin{pmatrix}
+            x_1 \\
+            x_2\\
+        \end{pmatrix}
+.\end{align*}
+Sujeto a :
+\[
+        \begin{pmatrix}
+            1 & 0 \\
+            0 & 2 \\
+            3 & 2 
+        \end{pmatrix}
+        \begin{pmatrix}
+        x_1\\
+        x_2
+    \end{pmatrix} \le  \begin{pmatrix}
+    4 \\
+    12 \\
+    18
+\end{pmatrix}
+.\] 
+\begin{itemize}
+    \item[] \( x_j  \) : número de lotes del producto \( j \) que se fabrican por semana.
+        \item[] \( j = 1 \)puertas.
+            \item[] \( j = 2 \) ventanas.
+\end{itemize}
+Maximizar : \( z = 3000\cdot x_1 + 5000 \cdot  x_2\)\\
+Sujeto  a:
+\begin{align*}
+  & x_1 \le   4 \\
+    & 2 \cdot x_2 \le  12 \\
+    & 3 x_1 + 2 x_2 \le  18 \\
+    & x_1 , x_2 \ge  0
+.\end{align*}
+\end{document}
+
