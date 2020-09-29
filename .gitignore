@@ -4,4 +4,7 @@
 *.aux
 *.fdb_latexmk
 *.synctex.gz
-
+*.swp
+*.sh
+*.py
+*.json
